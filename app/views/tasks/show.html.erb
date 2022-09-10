@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+<h2><%= @task.details %></h2>
+<p><%= @message %></p>
+<h2><%= link_to "Volver", tasks_path %></h2>
+<h2><%= link_to "Editar esta tarea", edit_path %></h2>
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
